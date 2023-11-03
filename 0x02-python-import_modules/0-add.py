@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-a=1
-b=2
-if a+b :
-    print(a+b)
+from add_0 import add
+
+a = 1
+b = 2
+
+print(f"{a} + {b} = {add(a, b)}")
