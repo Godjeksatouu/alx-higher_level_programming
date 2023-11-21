@@ -69,4 +69,4 @@ class Square:
             print("{}{}".format(" " * self.position[0], "#" * self.size))
         """
         prints a square of hashtags based on position and size
-        """
+        ""
