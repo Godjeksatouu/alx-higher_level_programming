@@ -1,18 +1,28 @@
 #!/usr/bin/python3
+"""Class Square defines a square"""
+
+
 class Square:
+    """This class defines a square.
+
+    This class has no public attributes.
+
     """
-    Represents a square object.
-    """
-    def __init__(self, side_length=0):
-        """
-        Initializes an instance of a square.
+    def __init__(self, size=0):
+        """This method initiates a square.
 
         Args:
-            side_length (int): Length of the square's side.
-                It must be a positive integer.
+            size (int): This defines the size of the square.
+                The size is validated with try/except.
+
         """
-        if type(side_length) is not int:
-            raise TypeError("side_length must be an integer")
-        if side_length < 0:
-            raise ValueError("side_length must be >= 0")
-        self.__side_length = side_length
+        try:
+            self.__size = size
+            if size < 0:
+                raise ValueError
+            if type(size) is not int:
+                raise TypeError
+        except TypeError:
+            raise TypeError("size must be an integer")
+        except ValueError:
+            raise ValueError("size must be >= 0")
